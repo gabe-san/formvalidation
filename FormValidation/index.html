@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form novalidate id="form" action="">
+      <label for="email">
+        <span>Enter an email</span>
+        <input
+          class="submitCheck"
+          id="email"
+          type="email"
+          name="mail"
+          required
+          minlength="8"
+        />
+        <span class="emailerror" aria-live="polite"></span>
+      </label>
+
+      <label for="zip-code">
+        <span>Enter a Zip Code</span>
+        <input class="submitCheck" id="zipcode" type="text" required />
+        <span class="zipcodeerror" aria-live="polite"></span>
+      </label>
+      <label for="country">
+        <select id="country" required>
+          <option value="ch">Switzerland</option>
+          <option value="fr">France</option>
+          <option value="de">Germany</option>
+          <option value="nl">The Netherlands</option>
+          <option value="us">United States</option>
+        </select>
+        <span class="countryerror" aria-live="polite"></span>
+      </label>
+      <label for="password">
+        <span>Enter a password</span>
+        <input
+          id="password"
+          class="submitCheck"
+          type="password"
+          name="password"
+          required
+          minlength="8"
+        />
+        <span class="passworderror" aria-live="polite"></span>
+      </label>
+
+      <label for="password-confirm">
+        <span>Confirm your password</span>
+        <input
+          id="password-confirm"
+          class="submitCheck"
+          type="password"
+          required
+          minlength="8"
+        />
+        <span class="pwconfirmerror" aria-live="polite"></span>
+      </label>
+
+      <button class="submitButton" type="submit">Submit</button>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
